@@ -1,13 +1,27 @@
 body{
     background-color: #0A090C;
 }
+.flex-container{
+    display:flex;
+    flex-direction: row;
+    height: 500;
+    padding-right: 25px;
+    padding-bottom:25px;
+}
 h1{
     color: #f0edee;
-    font-family: Lucida Sans Unicode
+    font-family: Lucida Sans Unicode;
+    padding-left: 25px;
+}
+video{
+    float: right;
+    padding-left:25px;
 }
 p{
     color: #f0edee;
-    font-family: Lucida Sans Unicode
+    font-family: Lucida Sans Unicode;
+    padding-left: 25px;
+    text-align:left;
 }
 .topnav {
   background-color: #4e6766;
