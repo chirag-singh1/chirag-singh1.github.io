@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>MergeSort Implementation</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>MergeSort Implementation</h1><br/><div class="codebox">public&nbsp;static&nbsp;int[]&nbsp;mergeSort(int[]arr){<br />	if(arr.length==1)&nbsp;return&nbsp;arr;<br />	<br />	int[]&nbsp;a=new&nbsp;int[arr.length/2];<br />	int[]&nbsp;b=new&nbsp;int[arr.length-arr.length/2];<br />	<br />	for(int&nbsp;i=0;i&lt;arr.length/2;i++){<br />		a[i]=arr[i];	<br />	}<br />	for(int&nbsp;i=arr.length/2;i&lt;arr.length;i++){<br />		b[i-arr.length/2]=arr[i];	<br />	}	<br />	<br />	return&nbsp;merge(mergeSort(a),mergeSort(b));<br />}<br /><br />public&nbsp;static&nbsp;int[]&nbsp;merge(int&nbsp;[]a,&nbsp;int[]b){<br />	int[]&nbsp;out=new&nbsp;int[a.length+b.length];<br />	int&nbsp;i=0;<br />	int&nbsp;j=0;<br /><br />	while(i&lt;a.length||j&lt;b.length){<br />		if(i&gt;=a.length){<br />			out[i+j]=b[j];<br />			j++;		<br />		}		<br />		else&nbsp;if(j&gt;=b.length){<br />			out[i+j]=a[i];<br />			i++;		<br />		}<br />		else&nbsp;if(a[i]&lt;b[j]){<br />			out[i+j]=a[i];<br />			i++;		<br />		}<br />		else{<br />			out[i+j]=b[j];<br />			j++;		<br />		}<br />	}<br />	<br />	return&nbsp;out;<br />}<br /></div></div></body></html>

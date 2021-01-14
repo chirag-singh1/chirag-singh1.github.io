@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Insert to Binary Search Tree</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Insert to Binary Search Tree</h1><br/><div class="codebox">public&nbsp;TreeNode&nbsp;insertIntoBST(TreeNode&nbsp;root,&nbsp;int&nbsp;val){<br />	if(root==null)&nbsp;return&nbsp;new&nbsp;TreeNode(val);<br />	<br />	TreeNode&nbsp;curr=root;<br /><br />	while(true){<br />		if(curr.val&gt;val){<br />			if(curr.left!=null){<br />				curr=curr.left;<br />			}<br />			else{<br />				curr.left=new&nbsp;TreeNode(val);<br />				break;<br />			}<br />		}<br />		else{<br />			if(curr.right!=null){<br />				curr=curr.right;			<br />			}<br />			else{<br />				curr.right=new&nbsp;TreeNode(val);<br />				break;			<br />			}<br />		}<br />	}<br />	<br />	return&nbsp;root;<br />}</div></div></body></html>

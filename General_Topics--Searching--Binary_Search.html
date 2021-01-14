@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Binary Search</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Binary Search</h1><br/><div class="codebox">/**<br />Starts&nbsp;at&nbsp;middle&nbsp;of&nbsp;data&nbsp;set,&nbsp;checking&nbsp;each&nbsp;iteration&nbsp;if&nbsp;the&nbsp;goal&nbsp;is&nbsp;greater&nbsp;than&nbsp;or&nbsp;less&nbsp;than&nbsp;the&nbsp;chosen&nbsp;data&nbsp;point<br />Precondition:&nbsp;Data&nbsp;must&nbsp;be&nbsp;sorted<br />Time&nbsp;Complexity:&nbsp;O(log&nbsp;N),&nbsp;could&nbsp;be&nbsp;more&nbsp;if&nbsp;not&nbsp;sorted<br />**/<br /><br />public&nbsp;int&nbsp;search(int[]arr,&nbsp;int&nbsp;target){<br />	int&nbsp;low=0;<br />	int&nbsp;high=arr.length-1;<br />	int&nbsp;mid=low+(high-low)/2;<br />	<br />	while(low&lt;high){<br />		mid=low+(high-low)/2;<br />		if(arr[mid]==target)&nbsp;return&nbsp;mid;<br />		else&nbsp;if(arr[mid]&gt;target){<br />			high=mid-1;		<br />		}	<br />		else{<br />			low=mid+1;		<br />		}<br />	}<br />	<br />	return&nbsp;-1;	<br />}</div></div></body></html>

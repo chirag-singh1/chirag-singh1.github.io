@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Level-Order Traversal</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Level-Order Traversal</h1><br/><div class="codebox">//Bottom&nbsp;up&nbsp;level&nbsp;order<br />public&nbsp;List&lt;List&lt;Integer&gt;&gt;&nbsp;levelOrderBottom(TreeNode&nbsp;root){<br />	List&lt;List&lt;Integer&gt;&gt;out=new&nbsp;ArrayList&lt;List&lt;Integer&gt;&gt;();<br />	<br />	if(root==null)&nbsp;return&nbsp;out;<br />	Deque&lt;TreeNode&gt;&nbsp;queue=new&nbsp;ArrayDeque&lt;TreeNode&gt;();	<br />	queue.add(root);<br />	<br />	while(!queue.isEmpty()){<br />	<br />		List&lt;Integer&gt;&nbsp;level=new&nbsp;ArrayList&lt;Integer&gt;();<br />		int&nbsp;size=queue.size();<br />		<br />		for(int&nbsp;i=0;i&lt;size;i++){<br />		<br />			TreeNode&nbsp;curr=queue.poll();<br />			level.add(curr.val);<br />			<br />			if(curr.left!=null){<br />				queue.add(curr.left);				<br />			}			<br />			if(curr.right!=null){<br />				queue.add(curr.right);				<br />			}<br />		}<br />	}<br />	<br />	return&nbsp;out;<br />}<br /><br /></div></div></body></html>

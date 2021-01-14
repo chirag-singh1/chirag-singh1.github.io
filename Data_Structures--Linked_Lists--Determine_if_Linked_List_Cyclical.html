@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Determine if Linked List Cyclical</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Determine if Linked List Cyclical</h1><br/><div class="codebox">public&nbsp;boolean&nbsp;hasCycle(ListNode&nbsp;head){<br />	if(head==false)&nbsp;return&nbsp;false;	<br />	<br />	ListNode&nbsp;fast=head;<br /><br />	while(fast.next!=null&amp;&amp;fast.next.next!=null){<br />		fast=fast.next.next;<br />		head=head.next;<br />		<br />		if(fast==head)return&nbsp;true;<br />	}	<br />	<br />	return&nbsp;false;<br />}<br /><br /></div></div></body></html>

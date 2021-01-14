@@ -1,0 +1,8 @@
+<!doctype html><html>
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+      <title>Hashing</title>
+      <meta name="generator" content="CherryTree">
+      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+    </head>
+    <body><div class='page'><h1 class='title'>Hashing</h1><br/>Any algorithm that can be used to map arbitrary size data to fixed-size values<br />Each data value is hashed and assigned a function as a result of the hashing function<br />	Collisions where two data values have the same result can be handled by chaining them (each cell of hash table points to linked list that holds same hash value, requires memory) or open addressing (each value is stored in the hash table, where each cell is either a value or nothing, requires search time)<br />Use: store key/value pairs in hash table with O(1) access time<br />	Implemented by classes like HashSet and HashMap (where hash key is memory address)<br />Commonly used for security applications<br /><br /></div></body></html>
