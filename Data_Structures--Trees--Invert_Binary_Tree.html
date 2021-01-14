@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Invert Binary Tree</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Invert Binary Tree</h1><br/><div class="codebox">public&nbsp;TreeNode&nbsp;invertTree(TreeNode&nbsp;root){<br />	if(root==null)&nbsp;return&nbsp;null;<br />	<br />	TreeNode&nbsp;right=invertTree(root.right);<br />	TreeNode&nbsp;left=invertTree(root.left);<br />	root.left=right;<br />	root.right=left;<br />	<br />	return&nbsp;root;<br />}<br /></div></div></body></html>

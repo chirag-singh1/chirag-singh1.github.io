@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>QuickSort Implementation</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>QuickSort Implementation</h1><br/><div class="codebox">public&nbsp;static&nbsp;void&nbsp;quickSort(int[]&nbsp;arr){<br />	Deque&lt;Integer&gt;&nbsp;stack=new&nbsp;ArrayDeque&lt;Integer&gt;();<br />	stack.push(0);<br />	stack.push(arr.length-1);<br />	<br />	while(!queue.isEmpty()){<br />		int&nbsp;max=stack.pop();<br />		int&nbsp;min=stack.pop();<br />		<br />		if(min&lt;max){<br />			int&nbsp;partition=partition(arr,min,max);<br />			<br />			stack.push(min);<br />			stack.push(partition-1);	<br />			<br />			stack.push(partition+1);<br />			stack.push(max);<br />		}<br />	}<br />}<br /><br />public&nbsp;static&nbsp;int&nbsp;partition(int[]arr,&nbsp;int&nbsp;min,int&nbsp;max){<br />	int&nbsp;pivot=arr[max];<br />	int&nbsp;ind=min;<br />	<br />	for(int&nbsp;i=min;i&lt;max;i++){<br />		if(arr[i]&lt;pivot){<br />			int&nbsp;temp=arr[ind];<br />			arr[ind]=arr[i];<br />			arr[i]=temp;<br />			ind++;		<br />		}	<br />	}<br />	<br />	arr[max]=arr[ind];<br />	arr[ind]=pivot;<br />	<br />	return&nbsp;ind;<br />}<br /></div></div></body></html>

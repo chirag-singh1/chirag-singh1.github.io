@@ -1,8 +1,0 @@
-<!doctype html><html>
-    <head>
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <title>Delete ListNode</title>
-      <meta name="generator" content="CherryTree">
-      <link rel="stylesheet" href="res/styles3.css" type="text/css" />
-    </head>
-    <body><div class='page'><h1 class='title'>Delete ListNode</h1><br/><div class="codebox">//Given&nbsp;reference&nbsp;to&nbsp;node&nbsp;to&nbsp;be&nbsp;deleted,&nbsp;assumes&nbsp;not&nbsp;tail&nbsp;node<br />public&nbsp;void&nbsp;deleteNode(ListNode&nbsp;node){<br />	node.val=node.next.val;<br />	node.next=node.next.next;<br />}<br /><br />//Delete&nbsp;the&nbsp;nth&nbsp;node&nbsp;in&nbsp;Linked&nbsp;List&nbsp;(indexed&nbsp;from&nbsp;0)<br />//Returns&nbsp;head&nbsp;of&nbsp;list,&nbsp;null&nbsp;if&nbsp;fails<br />public&nbsp;boolean&nbsp;deleteNode(ListNode&nbsp;head,&nbsp;int&nbsp;index){<br />	if(index==0)&nbsp;return&nbsp;head.next;<br />	<br />	ListNode&nbsp;curr=head;<br />	for(int&nbsp;i=0;i&lt;index-1;i++){<br />		if(curr==null)&nbsp;return&nbsp;null;<br />		<br />		curr=curr.next;<br />	}<br />	<br />	if(curr.next=null)return&nbsp;null;<br />	<br />	curr.next=curr.next.next;<br />	<br />	return&nbsp;head;<br />}</div></div></body></html>
